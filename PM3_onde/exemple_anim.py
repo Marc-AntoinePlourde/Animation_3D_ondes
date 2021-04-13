@@ -50,8 +50,8 @@ def update(frame):
     ln = ax.plot_surface(X, Y, Z, cmap='viridis', edgecolor='none')
     return ln,
 
-ani = FuncAnimation(fig, update, frames=np.arange(0, 500),
+ani = FuncAnimation(fig, update, frames=np.arange(0, 500), interval=20,
                     init_func=init, blit=True)
 
-ani.save(f'jaimelespag.gif', writer='imagemagick')
+ani.save(f'ondulation_interval_20ms.gif', writer='imagemagick')
 #plt.show()
